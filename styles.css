@@ -26,7 +26,7 @@ a {
     width: 100%;
     overflow: hidden;
     max-width: 16rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
 
 .h-menu {
@@ -112,6 +112,20 @@ a {
     border: 1px;
 }
 
+.h-navbar-icon {
+    color: var(--text-contrast-color, #fff);
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--primary-color, #FFFFFF);
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+    font: 500 16px/100% Inter, sans-serif;
+    border: 1px; 
+    max-width:600px;
+}
+
 .img-2 {
     aspect-ratio: 1;
     object-fit: contain;
@@ -130,4 +144,11 @@ a {
     font-size: 16px;
     cursor: pointer;
     border: none;
+}
+
+.description {
+    display: flex;
+    width: 1360px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
