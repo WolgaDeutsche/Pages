@@ -11,7 +11,6 @@ header {
 @media (max-width: 991px) {
     header {
         max-width: 100%;
-        flex-wrap: wrap;
         padding: 0 1em;
     }
 }
@@ -59,6 +58,12 @@ a {
     }
 }
 
+@media (max-width: 600px) {
+    .h-user-menu {
+        display: none;
+    }
+}
+
 @media (max-width: 640px) {
     .navigation {
         display: none;
@@ -74,6 +79,7 @@ a {
 .h-button-exclmark {
     align-self: stretch;
     display: flex;
+    float: right;
     justify-content: space-between;
     gap: 0px;
     padding-right: 2rem;
@@ -93,11 +99,17 @@ a {
     border: 1px;
 }
 
-@media (max-width: 991px) {
-    .h-user-menu {
-        white-space: initial;
-        padding: 0 1rem;
-    }
+.h-user-icon {
+    color: var(--text-contrast-color, #fff);
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--primary-color, #2d19bc);
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+    font: 500 16px/100% Inter, sans-serif;
+    border: 1px;
 }
 
 .img-2 {
