@@ -192,3 +192,37 @@ a {
   padding: 32px;
   flex-shrink: 0;
 }
+
+.info {
+  display: flex;
+  width: 90rem;
+  padding: 0px 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-university {
+  fill: var(--text-contrast-color, #FFF);
+  stroke-width: 5px;
+  stroke: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(10px);
+}
+
+.logo-university1 {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  padding: 20px 20.776px 20.776px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.number {
+  display: inline-flex;
+  height: 86px;
+  padding: 0px 16px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
