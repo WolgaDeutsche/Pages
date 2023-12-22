@@ -280,8 +280,17 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  [class=main-container] {
+      flex-direction: column!important;
+      font-size: 16px!important;
+      justify-content: center!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   [class=info] {
    width: 34rem;
+   justify-content: center!important;
    font-family: Inter;
    font-size: 16px;
    font-style: normal;
@@ -292,6 +301,16 @@ a {
    align-items: flex-start;
    gap: 32px;
   }
+}
+
+@media only screen and (max-width: 768px) {
+    [id=t1] {
+        width: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+    [id=t2] {
+        width: auto !important;
 }
 
 .h-index-menu {
