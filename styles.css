@@ -1,256 +1,161 @@
-
-@media screen and (max-width: 767px) {
-  html {
-    font-size: calc(10px + 13 * (100vw - 375px) / 447);
-  }
-
-  h1 {
-    font-size: 2.75rem;
-    font-style: bold;
-    line-height: 3.25rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  html {
-    font-size: calc(10px + 4 * (100vw - 768px) / 255);
-  }
-}
-
-@media (min-width: 1024px){
-  html {
-    font-size: calc(8px + 2 * (100vw - 1024px) / 336);
-  }
-
-  h1 {
-      font-size: 6.25rem;
-      font-style: bold;
-      line-height: 6.75rem;
-      /* 108% */
-  }
-}
-
-body {
-  font-size: 1.6rem;
-}
-
-ul {
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-strong,
-b {
-  font-weight: 700;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-label {
-  cursor: pointer;
-}
-
-.fixed-width
-{
-  max-width: 87.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: min(1rem, 5%);
-  padding-left: min(1rem, 5%);
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Inter", sans-serif;
-}
-
-body,
-html {
-  height: 100%;
-  line-height: 1.5;
-  background-color: #ffffff;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-}
-
 header {
-  justify-content: space-between;
-  display: flex;
-  width: 100%;
-  padding: 1rem 0px 1rem;
-  border-bottom: thin solid lightgray;
-  font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color, #ffffff26);
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0px 1rem;
 }
 
 @media (max-width: 991px) {
-  header {
-    max-width: 100%;
-    padding: 0 1em;
-  }
+    header {
+        max-width: 100%;
+        padding: 0 1em;
+    }
 }
 
 @media (max-width: 991px) {
-  h-navbar-icon {
-    display: show;
-  }
+    h-navbar-icon {
+
+    }
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .logo {
-  aspect-ratio: 3.06;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  overflow: hidden;
-  max-width: 16rem;
-  padding-left: 2rem;
+    aspect-ratio: 3.06;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+    max-width: 16rem;
+    padding-left: 2rem;
 }
 
 .h-menu {
-  align-items: center;
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-  gap: 120px;
-  margin: auto 0;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    margin: auto 0;
 }
 
 @media (max-width: 991px) {
-  .h-menu {
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
+    .h-menu {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
 }
 
 .h-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 56px;
-  margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 56px;
+    margin: auto 0;
 }
 
 @media (max-width: 991px) {
-  .h-nav {
-    display: none;
-  }
+    .h-nav {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
-  .h-user-menu {
-    display: none;
-  }
+    .h-user-menu {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
-  .navigation {
-    display: none;
-  }
+    .navigation {
+        display: none;
+    }
 }
 
 .h-nav-item {
-  color: var(--text-color, #2b303d);
-  font: 500 16px/100% Inter, sans-serif;
+    color: var(--text-color, #2b303d);
+    font: 500 16px/100% Inter, sans-serif;
 
 }
 
 .h-button-exclmark {
-  align-self: stretch;
-  display: flex;
-  float: right;
-  justify-content: space-between;
-  gap: 0px;
-  padding-right: 2rem;
-  min-height: 1rem;
+    align-self: stretch;
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    gap: 0px;
+    padding-right: 2rem;
+    min-height: 1rem;
 }
 
 .h-user-menu {
-  color: var(--text-contrast-color, #fff);
-  white-space: nowrap;
-  justify-content: center;
-  border-radius: 12px;
-  background-color: var(--primary-color, #2d19bc);
-  flex-grow: 1;
-  padding: 0.75rem 1rem;
-  min-height: 3rem;
-  font: 500 16px/100% Inter, sans-serif;
-  border: 1px;
+    color: var(--text-contrast-color, #fff);
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--primary-color, #2d19bc);
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+    font: 500 16px/100% Inter, sans-serif;
+    border: 1px;
 }
 
 .h-user-icon {
-  color: var(--text-contrast-color, #fff);
-  white-space: nowrap;
-  justify-content: center;
-  border-radius: 12px;
-  background-color: var(--primary-color, #2d19bc);
-  flex-grow: 1;
-  padding: 0.75rem 1rem;
-  min-height: 3rem;
-  font: 500 16px/100% Inter, sans-serif;
-  border: 1px;
+    color: var(--text-contrast-color, #fff);
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--primary-color, #2d19bc);
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+    font: 500 16px/100% Inter, sans-serif;
+    border: 1px;
 }
 
 .h-navbar-icon {
-  color: var(--text-contrast-color, #fff);
-  white-space: nowrap;
-  justify-content: center;
-  border-radius: 12px;
-  background-color: var(--primary-color, #FFFFFF);
-  flex-grow: 1;
-  padding: 0.75rem 1rem;
-  min-height: 3rem;
-  font: 500 16px/100% Inter, sans-serif;
-  border: 1px;
-  max-width: 600px;
+    color: var(--text-contrast-color, #fff);
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--primary-color, #FFFFFF);
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+    font: 500 16px/100% Inter, sans-serif;
+    border: 1px; 
+    max-width:600px;
 }
 
 .img-2 {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 44px;
-  align-items: flex-start;
-  overflow: hidden;
-  max-width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 44px;
+    align-items: flex-start;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .button {
-  padding: 10px 1rem;
-  border-radius: 4px;
-  background-color: var(--primary-color, #2d19bc);
-  color: var(--text-contrast-color, #fff);
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
+    padding: 10px 1rem;
+    border-radius: 4px;
+    background-color: var(--primary-color, #2d19bc);
+    color: var(--text-contrast-color, #fff);
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
 }
 
 .description {
-  display: flex;
-  width: 1360px;
-  justify-content: space-between;
-  align-items: flex-start;
+    display: flex;
+    width: 1360px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .methodologies {
@@ -364,135 +269,119 @@ a {
 }
 
 .h-index-menu {
-  color: var(--text-contrast-color, #fff);
-  white-space: nowrap;
-  justify-content: center;
-  border-radius: 12px;
-  background-color: var(--primary-color, #2d19bc);
-  flex-grow: 1;
-  padding: 0.75rem 1rem;
-  min-height: 3rem;
-  font: 500 16px/100% Inter, sans-serif;
-  border: 1px;
+        color: var(--text-contrast-color, #fff);
+        white-space: nowrap;
+        justify-content: center;
+        border-radius: 12px;
+        background-color: var(--primary-color, #2d19bc);
+        flex-grow: 1;
+        padding: 0.75rem 1rem;
+        min-height: 3rem;
+        font: 500 16px/100% Inter, sans-serif;
+        border: 1px;
+    }
+
+@media only screen and (max-width: 768px) {
+  [id=h11] {
+    font-family: Inter!important;
+    font-size: 38px!important;
+    font-style: normal!important;
+    font-weight: 500!important;
+    line-height: 46px!important;
+    margin-bottom: 1rem!important;
+  }
 }
+
+@media only screen and (max-width: 768px) {
+  [id=h12] {
+    font-family: Inter!important;
+    font-size: 38px!important;
+    font-style: normal!important;
+    font-weight: 500!important;
+    line-height: 46px!important;
+    margin-bottom: 1rem!important;
+    padding-left: 1rem!important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   [id=ind] {
-    width: 100%;
-    font-size: 40px !important;
-    line-height: 3rem !important;
-    margin: auto !important;
-    font-weight: 500;
-    text-align: start;
+      width: 310px;
+      font-size: 40px !important;
+      line-height: 3rem !important;
+      margin: auto !important;
+      font-weight: 500;
+      text-align: start;
   }
 }
 
 @media only screen and (max-width: 768px) {
   [class=main-container] {
-    flex-direction: column !important;
-    font-size: 16px !important;
-    justify-content: center !important;
+      width: 21rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 2px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [id=p1] {
+   font-family: Inter!important;
+   font-size: 16px!important;
+   font-style: normal!important;
+   font-weight: 400!important;
+   line-height: 24px!important;
+   padding: 1rem !important;
   }
 }
 
 @media only screen and (max-width: 768px) {
   [class=info] {
-    width: 34rem;
-    justify-content: center !important;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
+   width: 328px;
+   justify-content: center!important;
+   font-family: Inter;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 24px;
+   display: inline-flex;
+   flex-direction: column;
+   align-items: flex-start;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  [id=t1] {
-    width: auto !important;
-  }
-
-  @media only screen and (max-width: 768px) {
-    [id=t2] {
-      width: auto !important;
+    [id=t1] {
+        width: auto !important;
     }
-  }
+}
+    @media only screen and (max-width: 768px) {
+        [id=t2] {
+            width: auto !important;
+            padding: 1rem!important;
+    }
 }
 
-/* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
-  height: 100%;
-  width: 0;
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0, 0, 0);
-  /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/opacity */
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+@media only screen and (max-width: 768px) {
+        [id=p2] {
+            display: none!important;
+    }
 }
 
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 25%;
-  /* 25% from the top */
-  width: 100%;
-  /* 100% width */
-  text-align: center;
-  /* Centered text/links */
-  margin-top: 30px;
-  /* 30px top margin to avoid conflict with the close button on smaller screens */
+@media only screen and (max-width: 768px) {
+        [id=exp] {
+            width: auto !important;
+            padding: 1rem!important;
+    }
 }
 
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  /* Display block instead of inline */
-  transition: 0.3s;
-  /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover,
-.overlay a:focus {
-  color: #f1f1f1;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px
-  }
-
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+@media only screen and (max-width: 768px) {
+        [id=exp1] {
+            font-family: Inter!important;
+            font-size: 38px!important;
+            font-style: normal!important;
+            font-weight: 500!important;
+            line-height: 46px!important;
+    }
 }
