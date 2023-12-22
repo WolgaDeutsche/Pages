@@ -1,33 +1,18 @@
+<!doctype html>
 <html>
 
 <head>
   <title>НРСИ — как мы делали прототип?</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/pure-min.css" />
   <link rel="stylesheet" href="css/grids-responsive-min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
-
-    h1 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      letter-spacing: 1px;
-      font-size: 48px;
-    }
-
-    h2 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      letter-spacing: 2px;
-      font-size: 24px;
-    }
-
-    p {
-      font-family: 'Inter', sans-serif;
-      letter-spacing: 1px;
-      font-size: 14px;
-      color: #333333;
+    html {
+      font-family: Inter;
+      font-size: 18px;
     }
 
     .header {
@@ -35,6 +20,11 @@
       text-align: center;
       background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgb(53, 67, 255) 100%);
       color: white;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-family: 'Play', sans-serif;
     }
 
     .logo {
@@ -125,69 +115,108 @@
       }
 
       h1 {
-        font-size: 24px;
+        font-size: 28px;
+        font-family: 'Play', sans-serif;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="header">
-    <!--Content before waves-->
-    <div class="inner-header flex">
-      <h1>Сайт Независимого рейтинга сайтов университетов: <br /> как мы его делали?</h1>
+    <div class="header">
+      <!--Content before waves-->
+      <div class="inner-header flex">
+        <h1>Сайт Независимого рейтинга сайтов университетов: <br /> прогресс и перспективы</h1>
+      </div>
+
+      <!--Waves Container-->
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      <!--Waves end-->
+
     </div>
+    <!--Header ends-->
 
-    <!--Waves Container-->
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-        </g>
-      </svg>
+    <!--Content starts-->
+    <div class="content flex">
+      <h1>🡻</h1>
     </div>
-    <!--Waves end-->
-
-  </div>
-  <!--Header ends-->
-
-  <!--Content starts-->
-  <div class="content flex">
-    <p>Листайте ниже</p>
-  </div>
-  <!--Content ends-->
-     <div style="height: 100%; background-color: #fff">
-      <div class="pure-g" style="margin: 0rem 2rem 0rem 2rem">
-        <div class="pure-u-1 pure-u-md-1-2">
-          Photo
-        </div>
-        <div class="pure-u-1 pure-u-md-1-4">
-          <h2>Задача — сверстать интерактивный макет без чётких требований к стэку.</h2>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-4">
-          Text
-        </div>
+    <!--Content ends-->
+  <div style="height: 100%; background-color: #fff">
+    <div class="pure-g" style="padding: 3rem">
+      <div class="pure-u-1 pure-u-md-1-2"></div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>Задача — сверстать интерактивный макет без чётких требований к стэку.</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <p>Первые наброски были готовы в вечер вторника. Это были хэдер и разбитый на две части текстовый элемент, как самые простые элементы сайта. </p>
+        <p>Работу разбил на две части: прототипирование элементов и их размещение на сайте.</p>
+        <p>На текущий момент большая часть элементов готова — реализованы хэдер, футер, карточки экспертов, текстовые элементы, баннер на главной странице.</p>
+        <p>Ознакомиться можно <a href="./index.html">тут</a></p>
       </div>
     </div>
-    <div style="height: 100%; background-color: #eee">
-      <div class="pure-g" style="margin: 0rem 2rem 0rem 2rem">
-        <div class="pure-u-md-1-4 pure-u-1">
-          <h2>Задача — сверстать интерактивный макет без чётких требований к стэку.</h2>
-        </div>
-        <div class="pure-u-md-1-4 pure-u-1">
-          <p>Text</p>
-        </div>
-        <div class="pure-u-md-1-2 pure-u-1">
-          <p>Photo</p>
-        </div>
+  </div>
+  <div style="height: 100%; background-color: #eee">
+    <div class="pure-g" style="padding: 3rem">
+      <div class="pure-u-md-1-4 pure-u-1">
+        <h2>Чистый код с минимумом зависимостей.</h2>
+      </div>
+      <div class="pure-u-md-1-4 pure-u-1">
+        <p>Это принцип, по которому редко работают в современной IT-среде, но который обычно приносит самые сочные плоды.</p>
+        <p>Есть и нюансы, конечно: разработка может затянуться на более продолжительный срок.</p>
+        <p>Мой код легко встроить в проект с абсолютно любым стэом — от статики на Hugo до полноценного веб-приложения на Laravel.</p>
+      </div>
+      <div class="pure-u-md-1-2 pure-u-1">
       </div>
     </div>
+  </div>
+  <div style="height: 100%; background-color: #fff">
+    <div class="pure-g" style="padding: 3rem">
+      <div class="pure-u-1 pure-u-md-1-2">
+      </div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>Сайт готов на ~75 процентов.</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <p>Это — результат примерно 15 часов работы, которой я занимался по вечерам вне работы. При этом показывать прогресс хотелось каждый день, так что я методично повторял элемент за элементом.</p>
+        <p>К сожалению, такой подход дал свой негативный результат — текущая версия оставляет желать лучшего.</p>
+        <p>На текущий момент большая часть основных элементов — на месте и соответствуют макету. Но не хватает полноэкранных меню, анимации на главной странице, полноценного поиска и полной проверки всех элементов на адаптивность.</p>
+      </div>
+    </div>
+  </div>
+  <div style="height: 100%; background-color: #eee"">
+    <div class=" pure-g" style="padding: 3rem">
+    <div class="pure-u-md-1-4 pure-u-1">
+      <h2>Прошу лишь одного: дать выходные на доработку</h2>
+    </div>
+    <div class="pure-u-md-1-4 pure-u-1">
+      <p>Да, сейчас сайт не совсем готов к продакшену, но это более чем исправимо.</p>
+      <p>Два полностью свободных дня позволят с нуля переписать легаси, оптимизировать кодовую базу и отдать утром понедельника полностью готовый сайт.</p>
+      <p>Также буду особенно рад принять любую информацию о том, чем пользуются разработчики на Вашей стороне — например, если им привычен Bootstrap, то я пересяду на него (что сократит время разработки и облегчит поддержку с обеих сторон).</p>
+      <p>Оценить качество кода, который получится на выходе, можно, если залезть в код этой страницы.</p>
+    </div>
+    <div class="pure-u-md-1-2 pure-u-1"></div>
+  </div>
+  <div style="height: 100%; background-color: rgba(84, 58, 183, 1)">
+      <div class=" pure-g" style="padding: 2rem">
+    <div class="pure-u-md-1-4 pure-u-1"></div>
+    <div class="pure-u-md-1-2 pure-u-1">
+      <p style="text-align: center; color: white">Верстал Роман Смирнов специально для <span style="font-family: Play">PARAWEB</span>.</p>
+    </div>
+    <div class="pure-u-md-1-4 pure-u-1"></div>
+  </div>
+  </div>
 </body>
 
 </html>
