@@ -1,3 +1,11 @@
+.fixed-width {
+  max-width: 87.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: min(1rem, 5%);
+  padding-left: min(1rem, 5%);
+}
+
 header {
     justify-content: space-between;
     border-bottom: 1px solid var(--border-color, #ffffff26);
