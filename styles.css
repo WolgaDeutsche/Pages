@@ -280,11 +280,33 @@ a {
         font: 500 16px/100% Inter, sans-serif;
         border: 1px;
     }
+
+@media only screen and (max-width: 768px) {
+  [id=h11] {
+    font-family: Inter!important;
+    font-size: 38px!important;
+    font-style: normal!important;
+    font-weight: 500!important;
+    line-height: 46px!important;
+    margin-bottom: 1rem!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [id=h12] {
+    font-family: Inter!important;
+    font-size: 38px!important;
+    font-style: normal!important;
+    font-weight: 500!important;
+    line-height: 46px!important;
+    margin-bottom: 1rem!important;
+    padding-left: 1rem!important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   [id=ind] {
-      width: 100%;
+      width: 310px;
       font-size: 40px !important;
       line-height: 3rem !important;
       margin: auto !important;
@@ -295,15 +317,28 @@ a {
 
 @media only screen and (max-width: 768px) {
   [class=main-container] {
-      flex-direction: column!important;
-      font-size: 16px!important;
-      justify-content: center!important;
+      width: 21rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 2px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [id=p1] {
+   font-family: Inter!important;
+   font-size: 16px!important;
+   font-style: normal!important;
+   font-weight: 400!important;
+   line-height: 24px!important;
+   padding: 1rem !important;
   }
 }
 
 @media only screen and (max-width: 768px) {
   [class=info] {
-   width: 34rem;
+   width: 328px;
    justify-content: center!important;
    font-family: Inter;
    font-size: 16px;
@@ -313,7 +348,6 @@ a {
    display: inline-flex;
    flex-direction: column;
    align-items: flex-start;
-   gap: 32px;
   }
 }
 
@@ -321,10 +355,33 @@ a {
     [id=t1] {
         width: auto !important;
     }
-
+}
     @media only screen and (max-width: 768px) {
         [id=t2] {
             width: auto !important;
-        }
+            padding: 1rem!important;
     }
+}
 
+@media only screen and (max-width: 768px) {
+        [id=p2] {
+            display: none!important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+        [id=exp] {
+            width: auto !important;
+            padding: 1rem!important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+        [id=exp1] {
+            font-family: Inter!important;
+            font-size: 38px!important;
+            font-style: normal!important;
+            font-weight: 500!important;
+            line-height: 46px!important;
+    }
+}
