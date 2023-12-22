@@ -50,19 +50,23 @@
       <div class="h-button-exclmark">
         <button class="h-user-menu">Личный кабинет</button>
         <button class="h-user-icon"><img src="img/user.svg" /></button>
-        <button class="h-navbar-icon" style="margin-left: 8px; display: none"><img src="img/menu.svg" /></button>
+        <button class="h-navbar-icon" style="margin-left: 8px;"><img src="img/menu.svg" /></button>
       </div>
     </div>
   </header>
 
 <div>
   <div class="main-container" style="margin-top: 16px; padding: 2rem; display: flex">
-    <h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #FFFFFF); font-size: 100px; font-style: normal; line-height: 80px;">Независимый рейтинг сайтов университетов</h1>
+    <h1 id="ind" style="font-family: Inter; margin: inherit; color: var(--text-color, #FFFFFF); font-size: 100px; font-style: normal; line-height: 80px;">Независимый рейтинг сайтов университетов</h1>
   </div>
   <div class="h-button-exclmark" style="float: left; padding-left: 2rem">
-        <button class="h-user-menu">Смотреть рейтинг</button>
-        <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
+        <button class="h-index-menu">Смотреть рейтинг</button>
+        <button class="h-user-icon" onclick="document.getElementById(mobile-modal).style.display='block'"><img src="img/arrow-right.svg" /></button>
   </div>
+</div>
+
+<div id="mobile-modal">
+
 </div>
 
 <div class="info" style="margin-top: 10rem" >
@@ -70,7 +74,7 @@
    <img src="img/un/un.png" style="height: 90px;width: 280px; display: inline-flex">
    <p style="width: 8rem; color: var(--text-color, #FFFFFF); display: inline-flex; float: right; padding-left: 2rem">вузов уже присоединились к проекту</p>
  </div>
-  <p style="padding-right: 4rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
+  <p style="padding-right: 12rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
 </div>
 </div>
 
