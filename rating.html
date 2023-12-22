@@ -1,47 +1,24 @@
 <!doctype html>
 <html>
 <head>
-  <title>Управление цифрового развития (заглушка)</title>
+  <title>Рейтинг НРСИ</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="pure-min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  <link rel="stylesheet" href="css/pure-min.css" />
+  <link rel="stylesheet" href="css/grids-responsive-min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Inter", sans-serif;
-    }
-
-    body,
-    html {
-      height: 100%;
-      line-height: 1.5;
-      background-color: #ffffff;
-    }
-
-    .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px;
-    }
+    
   </style>
 </head>
 
-<body>
+<body class="fixed-width">
   <header>
     <img loading="lazy" src="nrsi_logo.svg" class="logo"/>
     <div class="h-menu">
       <div class="h-nav">
-        <a href="" class="h-nav-item">О проекте</a>
+        <a href="index.html" class="h-nav-item">О проекте</a>
         <a href="" class="h-nav-item">Эксперты</a>
         <a href="" class="h-nav-item">Методология</a>
         <a href="" class="h-nav-item">Рейтинг</a>
@@ -54,15 +31,80 @@
     </div>
   </header>
 
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  } 
+</script>
+
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+</div>
+
+<style>
+  .button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+</style>
+
 <div>
-  <div class="main-container" style="margin-top: 16px; padding: 2rem; display: flex">
-    <h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D); font-size: 100px; font-style: normal; line-height: 80px;">Рейтинг университетов</h1>
+  <div class="main-container" style="margin-top: 16px;">
+    <h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D)">Рейтинг университетов</h1>
   </div>
 </div>
 <div class="text-button">
-  <p style="padding-left: 2rem">В рейтинге представлены 200 лучших сайтов Российских университетов.<br /><br />
+  <p style="">В рейтинге представлены 200 лучших сайтов Российских университетов.<br /><br />
 При формировании рейтинга эксперты оценивали удобство, эргономику, технические свойства, доступность информации, а также цифровой бренд вуза.</p>
-  <div class="h-button-exclmark" style="float: left; padding-left: 2rem; width: 6rem">
+  <div class="h-button-exclmark" style="float: left; width: 6rem">
         <button class="h-user-menu">Подробнее о методологии</button>
         <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
   </div>
@@ -75,11 +117,11 @@
 
 <div class="filter-tab" style="padding-left: 2rem"></div>
 
-<div class="main-container" style="border-radius: 32px; background-color: var(--text-color, #F1F3F9); margin-top: 16px; padding: 2rem; justify-content: space-between; display: flex">
-  <div style="width: 400px"><h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D); font-size: 72px; font-style: normal; line-height: 80px;">На чем <br /> основана <br /> оценка?</h1></div>
-  <div style="width: 670px"><h4 style="color: var(--text-color, #2B303D); margin: inherit; font-family: Inter; font-size: 20px; font-style: normal; font-weight: 400; line-height: 28px"> Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят вузам не только оценить текущее состояние своих сайтов, но и принять меры для их улучшения.
-<br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.</h4>
-    <br />
+<div class="pure-g" style="border-radius: 32px; background-color: var(--text-color, #F1F3F9); margin-top: 16px; padding: 2rem;">
+  <div class="pure-u-1 pure-u-md-1-2"><h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h1></div>
+  <div class="pure-u-1 pure-u-md-1-2">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят вузам не только оценить текущее состояние своих сайтов, но и принять меры для их улучшения.
+<br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
+    <br /><br />
    <div class="h-button-exclmark" style="float: left">
         <button class="h-user-menu">Методология оценки</button>
         <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
@@ -99,5 +141,4 @@
   </footer>
   <!--Умница, залез в код и нашёл комментарий. Доволен собой? :)-->
 </body>
-
 </html>
