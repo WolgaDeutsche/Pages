@@ -10,20 +10,6 @@
   <link rel="stylesheet" href="css/grids-responsive-min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
-    @media (max-width: 767px) {
-      .hide-mobile {
-        display: none;
-      }
-
-      header {
-        padding: 1rem;
-      }
-
-      .snap-to-grid {
-        margin-left: 1rem
-      }
-    }
-
     @media (min-width: 767px) {
       .hide-desktop {
         display: none;
@@ -38,7 +24,8 @@
     }
 
     .snap-to-grid {
-      margin-left: 2rem
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
 
     .content-limiter {
@@ -72,87 +59,220 @@
       color: var(--text-color, #2B303D);
     }
 
-    .button-exclmark {
-      padding-right: 2rem;
-      min-height: 1rem;
-      padding-top: 1rem;
-    }
-
     .btn-excl {
-      color: var(--text-contrast-color, #fff);
-      white-space: nowrap;
+      color: #fff;
       border-radius: 12px;
-      background-color: var(--primary-color, #2d19bc);
+      background-color: #2d19bc;
       padding: 0.75rem 1rem;
-      min-height: 3rem;
-      font: 500 16px/100% Inter, sans-serif;
+      height: 4rem;
+      font-family: Inter;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: bolder;
+      line-height: 1.25rem;
       border: 1px;
     }
 
-    .btn-excl-dot {
-      color: var(--text-contrast-color, #fff);
-      white-space: nowrap;
+    .btn-excl:hover {
+      background: linear-gradient(90deg, rgba(25, 27, 188, 1) 0%, rgba(32, 32, 218, 1) 44%, rgba(45, 25, 188, 1) 100%);
+      background-color: #2d19bc00;
+      transition: background-color 2s;
+    }
+
+    .topnav {
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: right;
+      color: #2B303D;
+      text-align: center;
+      padding: 1.25rem 1.75rem;
+      text-decoration: none;
+      font-family: Inter;
+      font-size: 1rem;
+      font-weight: bolder;
+      line-height: 1rem;
+    }
+
+    .topnav span {
+      float: right;
+    }
+
+    .topnav .btn-excl {
+      height: 3.5rem;
+      padding: 0.875rem 1.5rem;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      color: #2D19BC;
+      transition: color 1s;
+    }
+
+    #logo {
+      width: 10.71875rem;
+      height: 3.5rem;
+    }
+
+    html,
+    p {
+      font-family: Inter;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.75rem;
+    }
+
+    .search {
+      padding: 18px 24px;
+      width: auto;
+      align-items: center;
+      gap: 12px;
       border-radius: 12px;
-      background-color: var(--primary-color, #2d19bc);
-      padding: 0.75rem 1rem;
-      min-height: 3rem;
-      font: 500 16px/100% Inter, sans-serif;
-      border: 1px;
+      border: 1px solid var(--border-color, #EAEAEA);
+      height: 1rem;
+      color: var(--text-dissabled-color, #A2A7B6);
+      /* Desktop/body */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    @media (max-width: 767px) {
+      .hide-mobile {
+        display: none;
+      }
+
+      header {
+        padding: 1rem;
+      }
+
+      .snap-to-grid {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+      .topnav a {
+        display: none;
+      }
+
+      h1 {
+        font-family: Inter;
+        font-size: 2.75rem;
+        font-style: bolder;
+        line-height: 3.25rem;
+      }
+
+      h2 {
+        font-family: Inter;
+        font-size: 2.375rem;
+        font-style: bold;
+        line-height: 2.875rem;
+        color: var(--text-color, #2B303D);
+      }
+
+      .btn-excl {
+        font-size: 1rem;
+      }
+
+      html,
+      p {
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+      }
+
+      .block-padding {
+        padding-top: 2.5rem
+      }
     }
   </style>
 </head>
 
-<body class="content-limiter">
+<body>
   <header>
-    <img loading="lazy" src="nrsi_logo.svg" class="logo" />
+    <div class="topnav content-limiter">
+      <img loading="lazy" src="nrsi_logo.svg" id="logo" />
+      <span><button class="btn-excl">Личный кабинет</button><button class="btn-excl">⚇</button></span>
+      <a style="color: #2D19BC;" href="">Рейтинг</a>
+      <a href="">Методология</a>
+      <a href="">Эксперты</a>
+      <a href="./index.html">О проекте</a>
+    </div>
+    <!-- <img loading="lazy" src="nrsi_logo.svg" class="logo" />
     <div class="hd-menu">
       <div class="hd-nav hide-mobile">
-        <a href="index.html">О проекте</a>
-        <a href="index.html">Эксперты</a>
-        <a href="index.html">Методология</a>
-        <a href="index.html">Рейтинг</a>
+        <a href="index.html"></a>
+        <a href="index.html"></a>
+        <a href="index.html"></a>
+        <a href="index.html"></a>
       </div>
       <div class="">
         <button class="h-user-menu hide-mobile">Личный кабинет</button>
         <button class="h-user-icon hide-mobile"><img src="img/user.svg" /></button>
         <button class="h-navbar-icon hide-desktop" style="margin-left: 8px"><img src="img/menu.svg" /></button>
       </div>
-    </div>
+    </div> -->
   </header>
-
-  <div>
-    <div class="snap-to-grid">
-      <h1>Рейтинг университетов</h1>
-      <p style="">В рейтинге представлены 200 лучших сайтов Российских университетов.<br /><br />
-        При формировании рейтинга эксперты оценивали удобство, эргономику, технические свойства, доступность информации, а также цифровой бренд вуза.</p>
-      <div class="button-exclmark" style="">
-        <span><button class="btn-excl">Подробнее о методологии</button><button class="btn-excl-dot"><img src="img/arrow-right.svg" /></button></span>
+  <div class="snap-to-grid content-limiter">
+    <div style="margin-top: 4rem">
+      <div>
+        <h1>Рейтинг университетов</h1>
+        <p>В рейтинге представлены 200 лучших сайтов Российских университетов.</p>
+        <p>При формировании рейтинга эксперты оценивали удобство, эргономику, технические свойства, доступность информации, а также цифровой бренд вуза.</p>
+        <span><button class="btn-excl">Подробнее о методологии</button><button class="btn-excl">➜</button></span>
       </div>
+    </div>
 
+    <div style="width: 100%; margin-top: 5rem">
+      <input class="search" type="text" placeholder="Начните поиск" style=""></input>
+      <button class="btn-excl" style="height: 3.25rem;"><img src="img/search.svg" /></button>
+    </div>
+
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th style="padding: 10px; border-bottom: 1px solid var(--border-color, #eaeaea);">Место</th>
+          <th style="padding: 10px; border-bottom: 1px solid var(--border-color, #eaeaea);">Название вуза</th>
+          <th style="padding: 10px; border-bottom: 1px solid var(--border-color, #eaeaea);">Баллы</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border-bottom: 1px solid var(--border-color, #eaeaea);">1</td>
+          <td style="padding: 10px; border-bottom: 1px solid var(--border-color, #eaeaea);">
+            <div>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</div>
+            <div style="display: flex; align-items: center;">
+              <a href="#" style="margin-right: 8px;">Перейти на сайт<img loading="lazy" src="img/arrow-right-primary.svg" style="width: 24px; height: 24px;" /></a>
+            </div>
+          </td>
+          <td style="padding: 10px; border-bottom: 1px solid var(--border-color, #eaeaea);">100,50</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pure-g" style="border-radius: 32px; background-color: var(--text-color, #F1F3F9); margin-top: 16px; padding: 2rem;">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 text block-padding">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят
+        вузам не только
+        оценить
+        текущее состояние своих сайтов, но и принять меры для их улучшения.
+        <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных
+        вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
+        <br /><br />
+        <button class="btn-excl">Методология оценки</button><button class="btn-excl"><img src="img/arrow-right.svg" /></button>
+      </div>
     </div>
   </div>
-
-  <div>
-    <input class="" type="text" placeholder="Начните поиск" style="border-radius: 12px; border: 1px solid var(--border-color, #EAEAEA); height: 1rem;"></input>
-    <button class="h-user-icon" style="flex-grow: 0; height: 1rem;"><img src="img/search.svg" /></button>
-  </div>
-
-  <div class="filter-tab" style="padding-left: 2rem"></div>
-
-  <div class="pure-g" style="border-radius: 32px; background-color: var(--text-color, #F1F3F9); margin-top: 16px; padding: 2rem;">
-    <div class="pure-u-1 pure-u-md-1-2">
-      <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h2>
-    </div>
-    <div class="pure-u-1 pure-u-md-1-2 text">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят вузам не только
-      оценить
-      текущее состояние своих сайтов, но и принять меры для их улучшения.
-      <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных
-      вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
-      <br /><br />
-      <span><button class="btn-excl">Методология оценки</button><button class="btn-excl"><img src="img/arrow-right.svg" /></button></span>
-    </div>
-  </div>
-  <footer class="main-container" style="border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
+  <footer class="main-container snap-to-grid content-limiter" style="border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
     <img loading="lazy" src="nrsi_logo_white.svg" class="img" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
     <div class="header-content" style="">
     </div>
