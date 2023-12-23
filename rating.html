@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Рейтинг НРСИ</title>
   <meta charset="UTF-8" />
@@ -9,125 +10,139 @@
   <link rel="stylesheet" href="css/grids-responsive-min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
-    
+    @media (max-width: 767px) {
+      .hidden-mobile {
+        display: none;
+      }
+    }
+    @media (min-width: 767px) {
+      .hidden-desktop {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 
 <body class="fixed-width">
   <header>
-    <img loading="lazy" src="nrsi_logo.svg" class="logo"/>
-    <div class="h-menu">
-      <div class="h-nav">
-        <a href="index.html" class="h-nav-item">О проекте</a>
-        <a href="" class="h-nav-item">Эксперты</a>
-        <a href="" class="h-nav-item">Методология</a>
-        <a href="" class="h-nav-item">Рейтинг</a>
+    <img loading="lazy" src="nrsi_logo.svg" class="logo" />
+    <div class="hd-menu">
+      <div class="hd-nav">
+        <a href="index.html">О проекте</a>
+        <a href="index.html">Эксперты</a>
+        <a href="index.html">Методология</a>
+        <a href="index.html">Рейтинг</a>
       </div>
       <div class="h-button-exclmark">
         <button class="h-user-menu">Личный кабинет</button>
         <button class="h-user-icon"><img src="img/user.svg" /></button>
-        <button class="h-navbar-icon" style="margin-left: 8px; display: none"><img src="img/menu.svg" /></button>
+        <button class="h-navbar-icon hidden-desktop" style="margin-left: 8px; display: none"><img src="img/menu.svg" /></button>
       </div>
     </div>
   </header>
 
-<script>
-  function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-  }
-  function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-  } 
-</script>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    } 
+  </script>
 
-<div id="myNav" class="overlay">
+  <div id="myNav" class="overlay">
 
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
   </div>
 
-</div>
+  <style>
+    .button {
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 20px;
+      padding: 12px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
 
-<style>
-  .button {
-    border-radius: 4px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 20px;
-    padding: 12px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
 
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
 
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
+    .button:hover span {
+      padding-right: 25px;
+    }
 
-  .button:hover span {
-    padding-right: 25px;
-  }
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
 
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-</style>
-
-<div>
-  <div class="main-container" style="margin-top: 16px;">
-    <h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D); padding-left: 2rem">Рейтинг университетов</h1>
+  <div>
+    <div class="main-container" style="margin-top: 16px;">
+      <h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D); padding-left: 2rem">Рейтинг университетов</h1>
+    </div>
   </div>
-</div>
-<div class="text-button">
-  <p style="padding-left: 2rem">В рейтинге представлены 200 лучших сайтов Российских университетов.<br /><br />
-При формировании рейтинга эксперты оценивали удобство, эргономику, технические свойства, доступность информации, а также цифровой бренд вуза.</p>
-  <div class="h-button-exclmark" style="float: left; width: 6rem; padding-left: 2rem">
-        <button class="h-user-menu">Подробнее о методологии</button>
-        <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
+  <div class="text-button">
+    <p style="padding-left: 2rem">В рейтинге представлены 200 лучших сайтов Российских университетов.<br /><br />
+      При формировании рейтинга эксперты оценивали удобство, эргономику, технические свойства, доступность информации, а также цифровой бренд вуза.</p>
+    <div class="h-button-exclmark" style="float: left; width: 6rem; padding-left: 2rem">
+      <button class="h-user-menu">Подробнее о методологии</button>
+      <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
+    </div>
   </div>
-</div>
 
-<div class="input">
-<input class="search" type="text" placeholder="Начните поиск" style="border-radius: 12px; border: 1px solid var(--border-color, #EAEAEA); height: 1rem;"></input>
-<button class="h-user-icon" style="flex-grow: 0; height: 1rem;"><img src="img/search.svg" /></button>
-</div>
+  <div class="input">
+    <input class="search" type="text" placeholder="Начните поиск" style="border-radius: 12px; border: 1px solid var(--border-color, #EAEAEA); height: 1rem;"></input>
+    <button class="h-user-icon" style="flex-grow: 0; height: 1rem;"><img src="img/search.svg" /></button>
+  </div>
 
-<div class="filter-tab" style="padding-left: 2rem"></div>
+  <div class="filter-tab" style="padding-left: 2rem"></div>
 
-<div class="pure-g" style="border-radius: 32px; background-color: var(--text-color, #F1F3F9); margin-top: 16px; padding: 2rem;">
-  <div class="pure-u-1 pure-u-md-1-2"><h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h1></div>
-  <div class="pure-u-1 pure-u-md-1-2">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят вузам не только оценить текущее состояние своих сайтов, но и принять меры для их улучшения.
-<br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
-    <br /><br />
-   <div class="h-button-exclmark" style="float: left">
+  <div class="pure-g" style="border-radius: 32px; background-color: var(--text-color, #F1F3F9); margin-top: 16px; padding: 2rem;">
+    <div class="pure-u-1 pure-u-md-1-2">
+      <h1 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h1>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят вузам не только оценить
+      текущее состояние своих сайтов, но и принять меры для их улучшения.
+      <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных
+      вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
+      <br /><br />
+      <div class="h-button-exclmark" style="float: left">
         <button class="h-user-menu">Методология оценки</button>
         <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
-   </div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
   <footer class="main-container" style="border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
     <img loading="lazy" src="nrsi_logo_white.svg" class="img" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
     <div class="header-content" style="">
@@ -135,10 +150,12 @@
     <div class="footer-content" style="margin-top: 40px; gap: 8px;">
       <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Политика конфиденциальности</a><br />
       <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Личный кабинет</a><br />
-      <div class="developed-by" style="color: var(--text-contrast-color, #fff); align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif;">Разработано в <img loading="lazy" src="paraweb.svg" style="aspect-ratio: 4.69; width: 100%; overflow: hidden; align-self: center; max-width: 4rem;" /></div>
-      
+      <div class="developed-by" style="color: var(--text-contrast-color, #fff); align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif;">Разработано в <img loading="lazy" src="paraweb.svg"
+          style="aspect-ratio: 4.69; width: 100%; overflow: hidden; align-self: center; max-width: 4rem;" /></div>
+
     </div>
   </footer>
   <!--Умница, залез в код и нашёл комментарий. Доволен собой? :)-->
 </body>
+
 </html>
