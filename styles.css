@@ -14,6 +14,12 @@ header {
   }
 }
 
+@media (max-width: 991px) {
+  h-navbar-icon {
+    display: none !important;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -83,6 +89,7 @@ a {
   gap: 0px;
   padding-right: 2rem;
   min-height: 1rem;
+  padding-top: 1rem;
 }
 
 .h-user-menu {
@@ -123,12 +130,6 @@ a {
   font: 500 16px/100% Inter, sans-serif;
   border: 1px;
   max-width: 600px;
-}
-
-@media (min-width: 991px) {
-  .h-navbar-icon {
-    display: none !important;
-  }
 }
 
 .curtain-button {
@@ -214,6 +215,8 @@ a {
 .expert {
   padding: 0.5rem;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
   height: 28rem;
 }
 
@@ -223,9 +226,6 @@ a {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--border-color, #ffffff26);
-  bottom: 0; 
-    left: 0; 
-    right: 0;
 }
 
 .logo-university {
@@ -447,7 +447,7 @@ a {
 @media only screen and (max-width: 768px) {
   [id=exp] {
     width: auto !important;
-    padding: 1rem !important
+    padding: 1rem !important;
   }
 }
 
@@ -458,12 +458,6 @@ a {
     font-style: normal !important;
     font-weight: 500 !important;
     line-height: 46px !important;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  [id=gr] {
-    grid-template-columns: repeat(1, 1fr)!important;
   }
 }
 

@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="css/pure-min.css" />
-  <link rel="stylesheet" href="css/grids-responsive-min.css" />
+  <link rel="stylesheet" href="pure-min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
     body,
@@ -36,8 +36,8 @@
   </style>
 </head>
 
-<body>
-<div style="background: linear-gradient(155deg, rgba(15,0,114,1) 0%, rgba(23,13,93,1) 22%, rgba(57,41,168,1) 62%, rgba(44,24,186,1) 100%); height: 100%; width: 100%;">
+<body style="max-width: 87.5rem; margin-right: auto; margin-left: auto;">
+<div style="background: linear-gradient(155deg, rgba(15,0,114,1) 0%, rgba(23,13,93,1) 22%, rgba(57,41,168,1) 62%, rgba(44,24,186,1) 100%); height: 92%;">
   <header id="head">
     <img loading="lazy" src="img/logo.svg" class="logo"/>
     <div class="h-menu">
@@ -57,7 +57,7 @@
 
 <div>
   <div class="main-container" style="margin-top: 16px; padding: 2rem; display: flex">
-    <h1 id="ind" style="font-family: Inter; margin: inherit; color: var(--text-color, #FFFFFF); font-size: 100px; font-style: normal; line-height: 108px;">Независимый рейтинг сайтов университетов</h1>
+    <h1 id="ind" style="font-family: Inter; margin: inherit; color: var(--text-color, #FFFFFF); font-size: 100px; font-style: normal; line-height: 80px;">Независимый рейтинг сайтов университетов</h1>
   </div>
   <div id="a1" class="h-button-exclmark" style="float: left; padding-left: 2rem">
         <button class="h-index-menu">Смотреть рейтинг</button>
@@ -83,12 +83,13 @@
 </div>
 
 
-<div id="exp" style="padding: 2rem">
-  <h2 id="exp1" class="h2-desktop" style="color: var(--text-color, #2B303D); margin: inherit; padding-bottom: 4rem">Эксперты</h2>
-<div id="gr" class="content-limiter" style="grid-template-columns: repeat(4, 1fr); display: grid; max-width: 82rem; width: 100%; gap: 1.25rem">
+<div id="exp" style="align-items: flex-start; gap: 56px; padding: 2rem">
+  <h2 id="exp1" class="h2-desktop" style="color: var(--text-color, #2B303D); margin: inherit; padding-bottom: 2rem">Эксперты</h2>
+<div style="max-width: 70rem; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; margin: auto;
+  width: 100%;">
   <div class="expert" style="align-content: center;">
     <img loading="lazy" src="img/experts/1.png">
-    <p class="h3-desktop;" style="width: 261px; text-align: center; color: #2B303D;">Эмиль Ахтямов</p>
+    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Эмиль Ахтямов</p>
     <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, веб-интегратор «Паравеб»</p>
   </div>
   <div class="expert" style="align-content: center;">
@@ -124,7 +125,7 @@
   <div class="expert" style="align-content: center;">
     <img loading="lazy" src="img/experts/8.png">
     <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Алексей Сафонов</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инженер по работе с данными АНО «Центр развития образования «Интеграция»</p>
+    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инженер по работе с данными АНО «Центр развития образования «Интеграция», Центр развития образования «Интеграция»</p>
   </div>
   <div class="expert" style="align-content: center;">
     <img loading="lazy" src="img/experts/9.png">
@@ -251,7 +252,6 @@
 
 <div id="ratenav" class="overlay">
   <img loading="lazy" style="padding-top: 2rem" src="img/logo.svg" class="logo"/>
-  
   <a href="javascript:void(0)" class="curtain-button" style="margin: 16px; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
   <div class="overlay-content" style="display: flex; flex-direction: column; padding: 2rem">
     <a href="#"><p class="h2-curtain">О проекте</p></a>
