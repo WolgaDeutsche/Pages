@@ -34,10 +34,11 @@
      inkscape:current-layer="svg1" />
   <g
      id="icon / arrow-right"
-     style="stroke:#2d19bc;stroke-opacity:1">
+     style="stroke:#2d19bc;stroke-opacity:1"
+     transform="matrix(2.0869565,0,0,2.0869565,-13.043478,-12.814257)">
     <path
        id="Vector"
-       d="M7 12H17M17 12L13 8M17 12L13 16"
+       d="m 7,12 h 10 m 0,0 -4,-4 m 4,4 -4,4"
        stroke="white"
        stroke-width="1.5"
        stroke-linecap="round"
