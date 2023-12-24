@@ -1,7 +1,7 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-  <title>Управление цифрового развития (заглушка)</title>
+  <title>Рейтинг НРСИ</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
@@ -33,40 +33,64 @@
       transform: translate(-50%, -50%);
       padding: 10px;
     }
+
+    .topnav a {
+      float: right;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.25rem 1.75rem;
+      text-decoration: none;
+      font-family: Inter;
+      font-size: 1rem;
+      font-weight: bolder;
+      line-height: 1rem;
+}
   </style>
 </head>
 
 <body>
 <div style="background: linear-gradient(155deg, rgba(15,0,114,1) 0%, rgba(23,13,93,1) 22%, rgba(57,41,168,1) 62%, rgba(44,24,186,1) 100%); height: 100%; width: 100%;">
-  <header id="head">
-    <img loading="lazy" src="img/logo.svg" class="logo"/>
-    <div class="h-menu">
-      <div class="h-nav">
-        <a href="" class="h-nav-item" style="color: var(--text-color, #FFFFFF)">О проекте</a>
-        <a href="" class="h-nav-item" style="color: var(--text-color, #FFFFFF)">Эксперты</a>
-        <a href="" class="h-nav-item" style="color: var(--text-color, #FFFFFF)">Методология</a>
-        <a href="" class="h-nav-item"style="color: var(--text-color, #FFFFFF)">Рейтинг</a>
-      </div>
-      <div id="h1" class="h-button-exclmark">
+  <header>
+    <div class="topnav content-limiter">
+      <img loading="lazy" src="nrsi_logo_white.svg" id="logo" />
+      <span> <div id="h1" style="padding: .25rem 0.75rem;" class="h-button-exclmark">
         <button class="h-user-menu">Личный кабинет</button>
         <button class="h-user-icon"><img src="img/user.svg" /></button>
         <button class="h-navbar-icon" onclick="openNav()" style="margin-left: 8px; "><img src="img/menu.svg" /></button>
-      </div>
+      </div></span>
+      <a href="./rating.html">Рейтинг</a>
+      <a href="">Методология</a>
+      <a href="">Эксперты</a>
+      <a href="./index.html">О проекте</a>
     </div>
+    <!-- <img loading="lazy" src="nrsi_logo.svg" class="logo" />
+    <div class="hd-menu">
+      <div class="hd-nav hide-mobile">
+        <a href="index.html"></a>
+        <a href="index.html"></a>
+        <a href="index.html"></a>
+        <a href="index.html"></a>
+      </div>
+      <div class="">
+        <button class="h-user-menu hide-mobile">Личный кабинет</button>
+        <button class="h-user-icon hide-mobile"><img src="img/user.svg" /></button>
+        <button class="h-navbar-icon hide-desktop" style="margin-left: 8px"><img src="img/menu.svg" /></button>
+      </div>
+    </div> -->
   </header>
 
 <div>
   <div class="main-container" style="margin-top: 16px; padding: 2rem; display: flex">
     <h1 id="ind" style="font-family: Inter; margin: inherit; color: var(--text-color, #FFFFFF); font-size: 100px; font-style: normal; line-height: 108px;">Независимый рейтинг сайтов университетов</h1>
   </div>
-  <div id="a1" class="h-button-exclmark" style="float: left; padding-left: 2rem">
+  <div id="a1" class="h-button-exclmark" style="float: left; padding-left: 2rem; padding-bottom: 10rem;">
         <button class="h-index-menu">Смотреть рейтинг</button>
         <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
   </div>
 </div>
 
-<div class="info" style="display: flex; margin-top: 10rem; " >
-  <p id="p1" style="padding-right: 12rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
+<div class="info" class="content-limiter" style="display: flex;" >
+  <p id="p1" style="padding-left: 2rem; padding-right: 6rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
  <div id="b1" style="width: 555px; border-right: 1px solid var(--border-color, #ffffff26);height: 166px; align-items: center; display: flex;">
    <img id="un" src="img/un/un.png" style="height: 90px;width: 280px; display: inline-flex">
    <p id="p2" style="width: 8rem; color: var(--text-color, #FFFFFF); display: inline-flex; float: right; padding-left: 2rem;">вузов уже присоединились к проекту</p>
