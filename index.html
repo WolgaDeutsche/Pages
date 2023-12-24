@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Рейтинг НРСИ</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+
   <link rel="stylesheet" href="css/pure-min.css" />
   <link rel="stylesheet" href="css/grids-responsive-min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
@@ -26,278 +27,555 @@
       background-color: #ffffff;
     }
 
-    .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px;
+    h1 {
+      font-family: Inter;
+      font-size: 6.25rem;
+      font-style: bold;
+      line-height: 6.75rem;
+      color: var(--text-color, #2B303D);
     }
 
+    h2 {
+      font-family: Inter;
+      font-size: 4.5rem;
+      font-style: bold;
+      line-height: 5rem;
+      color: var(--text-color, #2B303D);
+    }
+
+    .snap-to-grid {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    .content-limiter {
+      max-width: 87.5rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    #logo {
+      height: 5rem;
+      margin-top: 1.25rem;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-color, #332688);
+      gap: 1rem;
+    }
+
+    .btn-excl {
+      color: #fff;
+      border-radius: 12px;
+      background-color: #2d19bc;
+      padding: 0.75rem 2rem;
+      height: 4rem;
+      font-family: Inter;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: bolder;
+      line-height: 1.25rem;
+      border: 1px;
+    }
+
+    .btn-icon {
+      color: #fff;
+      border-radius: 12px;
+      background-color: #2d19bc;
+      padding: 0.75rem 1.25rem;
+      height: 4rem;
+      border: 1px;
+    }
+
+    #auth .btn-excl {
+      color: #fff;
+      border-radius: 12px;
+      background-color: #2d19bc;
+      padding: 0.75rem 1rem;
+      height: 3rem;
+      font-family: Inter;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: bolder;
+      line-height: 1.25rem;
+      border: 1px;
+    }
+
+    .topnav {
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
     .topnav a {
       float: right;
-      color: #ffffff;
+      color: #fff;
       text-align: center;
-      padding: 1.25rem 1.75rem;
+      padding: 3.25rem 1.75rem;
       text-decoration: none;
       font-family: Inter;
       font-size: 1rem;
       font-weight: bolder;
       line-height: 1rem;
-}
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      color: #2D19BC;
+      transition: color 1s;
+    }
+
+    .topnav span {
+      float: right;
+      margin-top: 2.25rem;
+    }
+
+    .h-navbar-icon {
+      color: var(--text-contrast-color, #fff);
+      border-radius: 12px;
+      background-color: var(--primary-color, #FFFFFF);
+      padding: 0.75rem 1rem;
+      min-height: 3rem;
+      font: 500 16px/100% Inter, sans-serif;
+      border: 1px;
+      max-width: 600px;
+    }
+
+    .info {
+      display: grid;
+      padding-left: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-color, #ffffff26);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    .overlay {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background: linear-gradient(155deg, rgba(15, 0, 114, 1) 0%, rgba(23, 13, 93, 1) 22%, rgba(57, 41, 168, 1) 62%, rgba(44, 24, 186, 1) 100%);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .curtain-button {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      padding: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      background: var(--text-contrast-color, #FFF);
+    }
+
+    .expert {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+      flex-shrink: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      [id=exp] {
+        padding: 1rem !important
+      }
+
+      [id=exp1] {
+        font-family: Inter !important;
+        font-size: 38px !important;
+        font-style: normal !important;
+        font-weight: bolder 500 !important;
+        line-height: 46px !important;
+      }
+    }
+
+    @media (min-width: 991px) {
+      [class=expert] {
+        display: grid;
+        padding: 0.5rem;
+        flex-shrink: 0;
+        height: 28rem;
+        justify-items: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hide-mobile {
+        display: none;
+      }
+
+      header {
+        padding: 1rem;
+      }
+
+      #logo {
+        height: 3.5rem;
+        margin-top: 0rem;
+      }
+
+      .snap-to-grid {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+      .topnav a {
+        display: none;
+      }
+
+      h1 {
+        font-family: Inter;
+        font-size: 2.75rem;
+        font-style: bolder;
+        line-height: 3.25rem;
+      }
+
+      h2 {
+        font-family: Inter;
+        font-size: 2.375rem;
+        font-style: bold;
+        line-height: 2.875rem;
+        color: var(--text-color, #2B303D);
+      }
+
+      .btn-excl {
+        font-size: 1rem;
+      }
+
+      html,
+      p {
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+      }
+
+      .block-padding {
+        padding-top: 2.5rem
+      }
+
+      footer {
+        width: inherit !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 1rem !important;
+      }
+
+      .main-container {
+        width: inherit !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 1rem !important;
+      }
+
+      [id=p1] {
+        padding: 1rem !important;
+        width: inherit !important;
+      }
+
+      [id=p2] {
+        display: none !important;
+      }
+
+      [id=b1] {
+        width: inherit !important;
+        border-top: 1px solid var(--border-color, #ffffff26) !important;
+        border-right: 0px !important;
+        align-self: center !important;
+      }
+
+      [id=un] {
+        align-self: center !important;
+      }
+
+      [class=info] {
+        padding-left: 0rem !important;
+        border-top: 0px !important;
+        justify-content: center !important;
+        flex-direction: row-reverse;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      
+    }
+
+    @media (min-width: 767px) {
+      .hide-desktop {
+        display: none;
+      }
+    }
   </style>
 </head>
 
 <body>
-<div style="background: linear-gradient(155deg, rgba(15,0,114,1) 0%, rgba(23,13,93,1) 22%, rgba(57,41,168,1) 62%, rgba(44,24,186,1) 100%); height: 100%; width: 100%;">
-  <header>
-    <div class="topnav content-limiter">
-      <img loading="lazy" src="nrsi_logo_white.svg" id="logo" />
-      <span> <div id="h1" style="padding: .25rem 0.75rem;" class="h-button-exclmark">
-        <button class="h-user-menu">Личный кабинет</button>
-        <button class="h-user-icon"><img src="img/user.svg" /></button>
-        <button class="h-navbar-icon" onclick="openNav()" style="margin-left: 8px; "><img src="img/menu.svg" /></button>
-      </div></span>
-      <a href="./rating.html">Рейтинг</a>
-      <a href="">Методология</a>
-      <a href="">Эксперты</a>
-      <a href="./index.html">О проекте</a>
+  <div style="background: linear-gradient(155deg, rgba(15,0,114,1) 0%, rgba(23,13,93,1) 22%, rgba(57,41,168,1) 62%, rgba(44,24,186,1) 100%); height: 100%; width: 100%; min-height:900px">
+    <header>
+      <div class="topnav content-limiter">
+        <img id="logo" loading="lazy" src="nrsi_logo_white.svg"/>
+        <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right;"><img src="img/menu.svg" /></button>
+        <span id="auth" class="hide-mobile snap-to-grid"><button style="background-color: #5545c5;" class="btn-excl">Личный кабинет</button><button style="background-color: #5545c5;" class="btn-excl"><img src="img/user.svg"
+              style="height: 1rem" /></button></span>
+        <a href="">Рейтинг</a>
+        <a href="">Методология</a>
+        <a href="">Эксперты</a>
+        <a href="./index.html">О проекте</a>
+      </div>
+    </header>
+
+    <div class="content-limiter">
+      <div>
+        <div style="margin-top: 16px;">
+          <h1 style="color: white;">Независимый рейтинг сайтов университетов</h1>
+        </div>
+        <div style="float: left; padding-bottom: 10rem;">
+          <button style="background-color: #5545c5;" class="btn-excl">Смотреть рейтинг</button><button style="background-color: #5545c5;" class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem" /></button>
+        </div>
+
+      </div>
     </div>
-    <!-- <img loading="lazy" src="nrsi_logo.svg" class="logo" />
-    <div class="hd-menu">
-      <div class="hd-nav hide-mobile">
-        <a href="index.html"></a>
-        <a href="index.html"></a>
-        <a href="index.html"></a>
-        <a href="index.html"></a>
+
+    <div class="info" style="display: flex;">
+      <p id="p1" style="padding-left: 2rem; padding-right: 6rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
+      <div id="b1" style="width: 555px; border-right: 1px solid var(--border-color, #ffffff26);height: 166px; align-items: center; display: flex;">
+        <img id="un" src="img/un/un.png" style="height: 90px;width: 280px; display: inline-flex">
+        <p id="p2" style="font-size: 1rem; line-height: 1.5rem; width: 8rem; color: var(--text-color, #FFFFFF); display: inline-flex; float: right; padding-left: 2rem;">вузов уже присоединились к проекту</p>
       </div>
-      <div class="">
-        <button class="h-user-menu hide-mobile">Личный кабинет</button>
-        <button class="h-user-icon hide-mobile"><img src="img/user.svg" /></button>
-        <button class="h-navbar-icon hide-desktop" style="margin-left: 8px"><img src="img/menu.svg" /></button>
-      </div>
-    </div> -->
-  </header>
-
-<div>
-  <div class="main-container" style="margin-top: 16px; padding: 2rem; display: flex">
-    <h1 id="ind" style="font-family: Inter; margin: inherit; color: var(--text-color, #FFFFFF); font-size: 100px; font-style: normal; line-height: 108px;">Независимый рейтинг сайтов университетов</h1>
-  </div>
-  <div id="a1" class="h-button-exclmark" style="float: left; padding-left: 2rem; padding-bottom: 10rem;">
-        <button class="h-index-menu">Смотреть рейтинг</button>
-        <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
-  </div>
-</div>
-
-<div class="info" class="content-limiter" style="display: flex;" >
-  <p id="p1" style="padding-left: 2rem; padding-right: 6rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
- <div id="b1" style="width: 555px; border-right: 1px solid var(--border-color, #ffffff26);height: 166px; align-items: center; display: flex;">
-   <img id="un" src="img/un/un.png" style="height: 90px;width: 280px; display: inline-flex">
-   <p id="p2" style="width: 8rem; color: var(--text-color, #FFFFFF); display: inline-flex; float: right; padding-left: 2rem;">вузов уже присоединились к проекту</p>
- </div>
-</div>
-</div>
-
-<div class="main-container" style="margin-top: 4rem; padding: 2rem; justify-content: space-between; display: flex">
-  <div><h1 id="h11" style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D); font-size: 72px; font-style: normal; line-height: 80px; margin-bottom: 3rem">Описание <br /> проекта</h1></div>
-  <div id="t1" style="width: 42rem"><h4 style="color: var(--text-color, #2B303D); margin: inherit; font-family: Inter; font-size: 20px; font-style: normal; font-weight: 400; line-height: 28px"> Несмотря на активную цифровую трансформацию российских вузов, их сайты не всегда соответствуют современным тенденциям дизайна и разработки. Университетам недостаточно просто обновлять свои веб-ресурсы, важно следить за высоким качеством этих изменений. Рейтинг призван стимулировать вузы к более ответственному отношению к своей digital-инфраструктуре.
-<br /> <br /> Цель рейтинга — вдохновить учебные заведения на модернизацию официальных сайтов, а также повысить общий уровень цифровой трансформации образования в стране. Вузы, чьи сайты займут высокие позиции в рейтинге, смогут получить дополнительное признание и поднять свою репутацию среди абитуриентов, студентов, преподавателей, партнеров и общественности в целом.</h4>
-    <br />
-</div>
-</div>
-
-
-<div id="exp" style="padding: 2rem">
-  <h2 id="exp1" class="h2-desktop" style="color: var(--text-color, #2B303D); margin: inherit; padding-bottom: 4rem">Эксперты</h2>
-<div id="gr" class="content-limiter" style="grid-template-columns: repeat(4, 1fr); display: grid; max-width: 82rem; width: 100%; gap: 1.25rem">
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/1.png">
-    <p class="h3-desktop;" style="width: 261px; text-align: center; color: #2B303D;">Эмиль Ахтямов</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, веб-интегратор «Паравеб»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/2.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Николай Глухих</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, Digital-агентство WOW</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/3.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Артемий Фоминых</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по развитию, Брендинговое агентство lovemedo</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/4.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Алена Фоминых</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Генеральный директор, Брендинговое агентство lovemedo</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/5.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Павел Бортвин</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Заместитель директора, Компания «ИТ Форвард»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/6.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Рустам Сатрудинов</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Заместитель директора по развитию, Компания «ИТ Форвард»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/7.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Александра Шмырина</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Начальник управления цифровых технологий СибГМУ, Сибирский государственный медицинский университет</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/8.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Алексей Сафонов</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инженер по работе с данными АНО «Центр развития образования «Интеграция»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/9.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Мария Моисеенко</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Управляющий партнер консалтингового агентства «Университеты и маркетинг», Консалтинговое агентство «Университеты и маркетинг»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/10.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Диана Крез</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по работе с образовательными организациями, веб-интегратор «Паравеб»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/11.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Никита Воеводин</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, Digital-агентство RedLine</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/12.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Владимир Томко</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по развитию, управляющий партнер, брендинговое агентство «Мелехов и Филюрин»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/13.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Максим Шумков</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по цифровым продуктам, ГК «Самолёт»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/14.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Микаэл Сагиров</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, digital-агентство Sagirov</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/15.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Александр Фадеев</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор инженерной школы информационных технологий и робототехники, Томский политех</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/16.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Амирхон Рахмонов</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Учредитель и директор, NAN agency</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/17.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Антон Гураль</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Учредитель и арт-директор, Дизайн-студия «ОГОНЬ.ДИЗАЙН»</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/18.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Ольга Смирнова</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Начальник управления цифрового развития, Донской государственный технический университет</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/19.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Евгения Евстигнеева</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Заместитель руководителя Центра проектов и практик Института дополнительного образования Университета Иннополис, Университет Иннополис</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/20.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Роман Широков</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">SRE, Тинькофф Бизнес</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/21.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Ильдар Низамеев</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Учредитель, digital-агентство ilar</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/22.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Дарья Казакова</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Руководитель направления по работе с образовательными организациями дирекции развития агро- и биотехнологий, Иннопрактика</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/23.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Александр Вишняков</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор PR-офиса, Балтийский федеральный университет имени Иммануила Канта</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/24.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Наумова Кристина</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Начальник отдела информационно-Стратегических коммуникаций и рекламы, СПб ГУАП</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/30.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Рустам Абдуллаев</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор PR-офиса, Балтийский федеральный университет имени Иммануила Канта</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/31.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Алексей Голодников</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инженер, компания ЮMoney</p>
-  </div>
-  <div class="expert" style="align-content: center;">
-    <img loading="lazy" src="img/experts/29.png">
-    <p class="h3-desktop" style="width: 261px; text-align: center; color: #2B303D;">Владимир Новиков</p>
-    <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инцедент-менеджер в Сбере, Сбер</p>
-  </div>
-</div>
-
-</div>
-
-<div class="main-container" style="border-radius: 32px; background-color: var(--text-color, #F1F3F9); margin-top: 16px; padding: 2rem; justify-content: space-between; display: flex; margin-left: 2rem; margin-right: 2rem;">
-  <h1 id="h12" style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D); font-size: 72px; font-style: normal; line-height: 80px; margin-bottom: 3rem">На чем <br /> основана <br /> оценка?</h1>
-  <div id="t2" style="width: 42rem"><h4 style="color: var(--text-color, #2B303D); margin: inherit; font-family: Inter; font-size: 20px; font-style: normal; font-weight: 400; line-height: 28px;"> Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят вузам не только оценить текущее состояние своих сайтов, но и принять меры для их улучшения.
-<br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.</h4>
-    <br />
-   <div class="h-button-exclmark" style="float: left">
-        <button class="h-index-menu">Методология оценки</button>
-        <button class="h-user-icon"><img src="img/arrow-right.svg" /></button>
-   </div>
-</div>
-</div>
-<footer class="content-limiter">
-  <div class="snap-to-grid" style="border-radius: 32px; display: flex; justify-content: space-between; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
-    <img loading="lazy" src="nrsi_logo_white.svg" class="img" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
-    <div>
-      <div style="gap: 8px; display: flex; align-items: flex-start;">
-        <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Политика конфиденциальности</a><br />
-        <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Личный кабинет</a><br />
-      </div>
-      <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="paraweb.svg"
-          style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
     </div>
   </div>
-</footer>
 
-<div id="ratenav" class="overlay">
-  <img loading="lazy" style="padding-top: 2rem" src="img/logo.svg" class="logo"/>
-  
-  <a href="javascript:void(0)" class="curtain-button" style="margin: 16px; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
-  <div class="overlay-content" style="display: flex; flex-direction: column; padding: 2rem">
-    <a href="#"><p class="h2-curtain">О проекте</p></a>
-    <a href="#"><p class="h2-curtain">Эксперты</p></a>
-    <a href="#"><p class="h2-curtain">Методология</p></a>
-    <a href="#"><p class="h2-curtain">Рейтинг</p></a>
+  <div class="content-limiter">
+    <div class="pure-g snap-to-grid" style="margin-top: 7.5rem; margin-bottom: 7.5rem;">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">Описание проекта</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 text block-padding">Несмотря на активную цифровую трансформацию российских вузов, их сайты не всегда соответствуют современным тенденциям дизайна и разработки. Университетам недостаточно просто
+        обновлять свои веб-ресурсы, важно следить за высоким качеством
+        этих изменений. Рейтинг призван стимулировать вузы к более ответственному отношению к своей digital-инфраструктуре.<br /><br />
+        Цель рейтинга — вдохновить учебные заведения на модернизацию официальных сайтов, а также повысить общий уровень цифровой трансформации образования в стране. Вузы, чьи сайты займут высокие позиции в рейтинге, смогут получить
+        дополнительное
+        признание и поднять свою репутацию среди абитуриентов, студентов, преподавателей, партнеров и общественности в целом.
+      </div>
+    </div>
+
+
+    <div id="exp snap-to-grid" style="padding: 2rem">
+      <h2 id="exp1" class="h2-desktop" style="color: var(--text-color, #2B303D); margin: inherit; padding-bottom: 4rem">Эксперты</h2>
+      <div id="gr" class="content-limiter" style="grid-template-columns: repeat(4, 1fr); display: grid; max-width: 82rem; width: 100%; gap: 1.25rem">
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/1.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Эмиль Ахтямов</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, веб-интегратор «Паравеб»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/2.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Николай Глухих</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, Digital-агентство WOW</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/3.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Артемий Фоминых</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по развитию, Брендинговое агентство lovemedo</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/4.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Алена Фоминых</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Генеральный директор, Брендинговое агентство lovemedo</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/5.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Павел Бортвин</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Заместитель директора, Компания «ИТ Форвард»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/6.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Рустам Сатрудинов</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Заместитель директора по развитию, Компания «ИТ Форвард»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/7.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Александра Шмырина</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Начальник управления цифровых технологий СибГМУ, Сибирский государственный медицинский университет</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/8.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Алексей Сафонов</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инженер по работе с данными АНО «Центр развития образования «Интеграция»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/9.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Мария Моисеенко</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Управляющий партнер консалтингового агентства «Университеты и маркетинг», Консалтинговое агентство «Университеты и маркетинг»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/10.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Диана Крез</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по работе с образовательными организациями, веб-интегратор «Паравеб»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/11.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Никита Воеводин</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, Digital-агентство RedLine</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/12.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Владимир Томко</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по развитию, управляющий партнер, брендинговое агентство «Мелехов и Филюрин»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/13.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Максим Шумков</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор по цифровым продуктам, ГК «Самолёт»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/14.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Микаэл Сагиров</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор, digital-агентство Sagirov</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/15.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Александр Фадеев</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор инженерной школы информационных технологий и робототехники, Томский политех</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/16.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Амирхон Рахмонов</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Учредитель и директор, NAN agency</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/17.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Антон Гураль</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Учредитель и арт-директор, Дизайн-студия «ОГОНЬ.ДИЗАЙН»</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/18.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Ольга Смирнова</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Начальник управления цифрового развития, Донской государственный технический университет</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/19.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Евгения Евстигнеева</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Заместитель руководителя Центра проектов и практик Института дополнительного образования Университета Иннополис, Университет Иннополис</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/20.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Роман Широков</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">SRE, Тинькофф Бизнес</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/21.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Ильдар Низамеев</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Учредитель, digital-агентство ilar</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/22.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Дарья Казакова</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Руководитель направления по работе с образовательными организациями дирекции развития агро- и биотехнологий, Иннопрактика</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/23.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Александр Вишняков</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор PR-офиса, Балтийский федеральный университет имени Иммануила Канта</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/24.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Наумова Кристина</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Начальник отдела информационно-стратегических коммуникаций и рекламы, СПбГУАП</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/30.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Рустам Абдуллаев</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Директор PR-офиса, Балтийский федеральный университет имени Иммануила Канта</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/31.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Алексей Голодников</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инженер, компания ЮMoney</p>
+        </div>
+        <div class="expert" style="align-content: center;">
+          <img loading="lazy" src="img/experts/29.png">
+          <h3 style="width: 261px; text-align: center; color: #2B303D;">Владимир Новиков</h3>
+          <p class="small-desktop" style="width: 261px; text-align: center; color: #2B303D;">Инцидент-менеджер в Сбере, Сбер</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g snap-to-grid" style="background: var(--element-color, #F1F3F9); border-radius: 1.5rem; padding: 1.5rem; margin-top: 2rem">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 text block-padding">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят
+        вузам не только оценить текущее состояние своих сайтов, но и принять меры для их улучшения.
+        <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных
+        вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
+        <br /><br />
+        <button class="btn-excl">Методология оценки</button><button class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem" /></button>
+      </div>
+    </div>
   </div>
-</div>
+
+  <footer class="content-limiter">
+    <div class="snap-to-grid" style="border-radius: 32px; display: flex; justify-content: space-between; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
+      <img loading="lazy" src="nrsi_logo_white.svg" class="img" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
+      <div>
+        <div style="gap: 8px; display: flex; align-items: flex-start;">
+          <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Политика конфиденциальности</a><br />
+          <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Личный кабинет</a><br />
+        </div>
+        <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="paraweb.svg"
+            style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ratenav" class="overlay">
+    <div class="snap-to-grid">
+      <img loading="lazy" style="padding-top: 2rem" src="img/logo.svg" id="logo" />
+      <a href="javascript:void(0)" class="curtain-button" style="margin: 16px; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
+      <div style="display: flex; flex-direction: column; padding: 2rem">
+        <h2><a href="#" style="text-decoration: none; color: white">О проекте</a></h2>
+        <h2><a href="#" style="text-decoration: none; color: white">Эксперты</a></h2>
+        <h2><a href="#" style="text-decoration: none; color: white">Методология</a></h2>
+        <h2><a href="#" style="text-decoration: none; color: white">Рейтинг</a></h2>
+        <p>
+          <span id="auth"><button class="btn-excl" style="background-color: #5545c5;">Личный кабинет</button><button class="btn-excl" style="background-color: #5545c5;"><img src="img/user.svg" style="height: 1rem" /></button></span>
+        </p>
+      </div>
+    </div>
+  </div>
 
   <!--Умница, залез в код и нашёл комментарий. Доволен собой? :)-->
 </body>
 
 <script>
-/* Open */
-function openNav() {
-  document.getElementById("ratenav").style.height = "100%";
-}
+  /* Open */
+  function openNav() {
+    document.getElementById("ratenav").style.height = "100%";
+  }
 
-/* Close */
-function closeNav() {
-  document.getElementById("ratenav").style.height = "0%";
-}
+  /* Close */
+  function closeNav() {
+    document.getElementById("ratenav").style.height = "0%";
+  }
 </script>
+
 </html>
