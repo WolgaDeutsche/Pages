@@ -348,7 +348,6 @@
 }
 
 .accordion:after {
-  content: '\002B';
   color: #777;
   font-weight: bold;
   float: right;
@@ -356,7 +355,7 @@
 }
 
 .active:after {
-  content: "\2212";
+  ;
 }
 
 .panel {
@@ -487,6 +486,34 @@
         <a href="#home">Lorem ipsum</a>
       </div>
     </div>
+
+  <div class="snap-to-grid hide-mobile" style="display: flex; flex-direction: column;">
+   <div style="display: flex; align-items: flex-start; gap: 20px; flex-direction: row; border-bottom: 1px solid var(--border-color, #EAEAEA);"> 
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; width: 6rem;">Место</p>
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px;">Название вуза</p>
+  </div>
+   <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">1</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  </div>
+    
+
+ <div class="hide-desktop"> 
+  <button class="accordion" style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px;">1 <br /> <span style="color: #2b303d;"><p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p></span></button>
+  <div class="panel" style="display: flex; flex-direction: column;"> 
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; margin-right: auto; margin-top: 0;">Баллы</p>
+    <p style="display: flex; width: 9rem; margin-top: 0; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; margin-right: auto; margin-top: 0;">Сайт</p>
+    <p style=" margin-top: 0;">Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+   </div>
+  </div>
+
+  
 
     <div class="pure-g snap-to-grid" style="background: var(--element-color, #F1F3F9); border-radius: 1.5rem; padding: 1.5rem; margin-top: 2rem">
       <div class="pure-u-1 pure-u-md-1-2">
