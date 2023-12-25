@@ -140,6 +140,12 @@
       max-width: 600px;
     }
 
+    #un {
+      height: 5.5rem; 
+      width: 16rem; 
+      display: inline-flex;
+    }
+
     .info {
       display: grid;
       justify-content: space-between;
@@ -246,23 +252,25 @@
         padding: 1rem !important;
       }
 
-      [id=p1] {
+      #p1 {
         padding: 1rem !important;
         width: inherit !important;
       }
 
-      [id=b1] {
+      #b1 {
         width: inherit !important;
         border-top: 1px solid var(--border-color, #ffffff26) !important;
         border-right: 0px !important;
         align-self: center !important;
       }
 
-      [id=un] {
+      #un {
         align-self: center !important;
+        height: 4rem; 
+        width: 12rem; 
       }
 
-      [class=info] {
+      .info {
         padding-left: 0rem !important;
         border-top: 0px !important;
         justify-content: center !important;
@@ -323,7 +331,7 @@
 
     <div class="info" style="display: flex;">
       <div id="b1" style="width: 30rem; border-right: 1px solid var(--border-color, #ffffff26); height: 10rem; align-items: center; display: flex;">
-        <img id="un" src="img/un/un.png" style="height: 90px;width: 17rem; display: inline-flex">
+        <img id="un" src="img/un/un.png" style="">
         <p id="p2" style="font-size: 1rem; line-height: 1.5rem; width: 8rem; color: var(--text-color, #FFFFFF); display: inline-flex; float: right; padding-left: 2rem;">вузов уже присоединились к проекту</p>
       </div>
       <p id="p1" style="padding-left: 2rem; padding-right: 6rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
