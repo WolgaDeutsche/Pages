@@ -7,314 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="css/pure-min.css" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/grids-responsive-min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Inter", sans-serif;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    body,
-    html {
-      height: 100%;
-      line-height: 1.5;
-      background-color: #ffffff;
-    }
-
-    h1 {
-      font-family: Inter;
-      font-size: 6.25rem;
-      font-style: bold;
-      line-height: 6.75rem;
-      color: var(--text-color, #2B303D);
-    }
-
-    h2 {
-      font-family: Inter;
-      font-size: 4.5rem;
-      font-style: bold;
-      line-height: 5rem;
-      color: var(--text-color, #2B303D);
-    }
-
-    .snap-to-grid {
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
-
-    .content-limiter {
-      max-width: 140rem;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    #logo {
-      height: 5rem;
-      margin-top: 1.25rem;
-    }
-
-    header {
-      border-bottom: 1px solid var(--border-color, #332688);
-      gap: 1rem;
-    }
- 
-    html {
-      font-size: 10px 
-    }
-
-    .btn-excl {
-      color: #fff;
-      border-radius: 12px;
-      background-color: #2d19bc;
-      padding: 0.75rem 2rem;
-      height: 4rem;
-      font-family: Inter;
-      font-size: 1.125rem;
-      font-style: normal;
-      font-weight: bolder;
-      line-height: 1.25rem;
-      border: 1px;
-    }
-
-    .btn-icon {
-      color: #fff;
-      border-radius: 12px;
-      background-color: #2d19bc;
-      padding: 0.75rem 1.25rem;
-      height: 4rem;
-      border: 1px;
-    }
-
-    #auth .btn-excl {
-      color: #fff;
-      border-radius: 12px;
-      background-color: #2d19bc;
-      padding: 0.75rem 1rem;
-      height: 3rem;
-      font-family: Inter;
-      font-size: 1.125rem;
-      font-style: normal;
-      font-weight: bolder;
-      line-height: 1.25rem;
-      border: 1px;
-    }
-
-    .topnav {
-      overflow: hidden;
-    }
-
-    /* Style the links inside the navigation bar */
-    .topnav a {
-      float: right;
-      color: #fff;
-      text-align: center;
-      padding: 3.25rem 1.75rem;
-      text-decoration: none;
-      font-family: Inter;
-      font-size: 1rem;
-      font-weight: bolder;
-      line-height: 1rem;
-    }
-
-    /* Change the color of links on hover */
-    .topnav a:hover {
-      color: #2D19BC;
-      transition: color 1s;
-    }
-
-    .topnav span {
-      float: right;
-      margin-top: 2.25rem;
-    }
-
-    .h-navbar-icon {
-      color: var(--text-contrast-color, #fff);
-      border-radius: 12px;
-      background-color: var(--primary-color, #FFFFFF);
-      padding: 0.75rem 1rem;
-      min-height: 3rem;
-      font: 500 16px/100% Inter, sans-serif;
-      border: 1px;
-      max-width: 600px;
-    }
-
-    #un {
-      height: 5.5rem; 
-      width: 16rem; 
-      display: inline-flex;
-    }
-
-    .info {
-      display: grid;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--border-color, #ffffff26);
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-    }
-
-    .overlay {
-      height: 0%;
-      width: 100%;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background: linear-gradient(155deg, rgba(15, 0, 114, 1) 0%, rgba(23, 13, 93, 1) 22%, rgba(57, 41, 168, 1) 62%, rgba(44, 24, 186, 1) 100%);
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-
-    .curtain-button {
-      display: flex;
-      width: 40px;
-      height: 40px;
-      padding: 0.5rem;
-      justify-content: center;
-      align-items: center;
-      border-radius: 12px;
-      background: var(--text-contrast-color, #FFF);
-    }
-
-    @media (max-width: 767px) {
-      .hide-mobile {
-        display: none;
-      }
-
-      header {
-        padding: 1rem;
-      }
-
-      #footer-flex {
-        flex-direction: column;
-      }
-
-      #logo {
-        height: 3.5rem;
-        margin-top: 0rem;
-      }
-
-      .snap-to-grid {
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
-
-      .topnav a {
-        display: none;
-      }
-
-      h1 {
-        font-family: Inter;
-        font-size: 2.75rem;
-        font-style: bolder;
-        line-height: 3.25rem;
-      }
-
-      h2 {
-        font-family: Inter;
-        font-size: 2.375rem;
-        font-style: bold;
-        line-height: 2.875rem;
-        color: var(--text-color, #2B303D);
-      }
-
-      .btn-excl {
-        font-size: 1rem;
-      }
-
-      html,
-      p {
-        font-family: Inter;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.5rem;
-      }
-
-
-      footer {
-        width: inherit !important;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-        padding: 1rem !important;
-      }
-
-      .main-container {
-        width: inherit !important;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-        padding: 1rem !important;
-      }
-
-      #p1 {
-        padding: 1rem !important;
-        width: inherit !important;
-      }
-
-      #b1 {
-        width: inherit !important;
-        border-top: 1px solid var(--border-color, #ffffff26) !important;
-        border-right: 0px !important;
-        align-self: center !important;
-      }
-
-      #un {
-        align-self: center !important;
-        height: 4rem; 
-        width: 12rem; 
-      }
-
-      .info {
-        padding-left: 0rem !important;
-        border-top: 0px !important;
-        justify-content: center !important;
-        flex-direction: row-reverse;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        display: inline-flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-
-      .block-padding {
-        padding-top: 2.5rem
-      }
-    }
-
-    @media (min-width: 767px) {
-      .hide-desktop {
-        display: none;
-      }
-    }
-  </style>
+  <script src="script.js"></script>
 </head>
 
 <body>
   <div style="background: linear-gradient(155deg, rgba(15,0,114,1) 0%, rgba(44,24,186,1) 100%); height: 100%; width: 100%;">
     <header>
       <div class="topnav content-limiter">
-        <img id="logo" loading="lazy" src="nrsi_logo_white.svg" />
+        <img id="logo" loading="lazy" src="img/nrsi_logo_white.svg" />
         <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right;"><img src="img/menu.svg" /></button>
         <button class="h-navbar-icon hide-desktop" style="float: right; background-color: #5545c5"><img src="img/user.svg" /></button>
         <span id="auth" class="hide-mobile snap-to-grid"><button style="background-color: #5545c5;" class="btn-excl">Личный кабинет</button><button style="background-color: #5545c5;" class="btn-excl"><img src="img/user.svg"
@@ -585,21 +288,21 @@
 
     <footer class="content-limiter">
       <div id="footer-flex" class="snap-to-grid" style="border-radius: 32px; display: flex; justify-content: space-between; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
-        <img loading="lazy" src="nrsi_logo_white.svg" class="img" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
+        <img loading="lazy" src="img/nrsi_logo_white.svg" class="img" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
         <div>
           <div style="gap: 8px; display: flex; align-items: flex-start;">
             <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Политика конфиденциальности</a><br />
             <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Личный кабинет</a><br />
           </div>
-          <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="paraweb.svg"
+          <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="img/paraweb.svg"
               style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
         </div>
       </div>
     </footer>
 
-    <div id="ratenav" class="overlay">
+    <div id="ratenav" class="overlay1">
       <div class="snap-to-grid">
-        <img loading="lazy" style="padding-top: 2rem" src="img/logo.svg" id="logo" />
+        <img loading="lazy" style="padding-top: 2rem" src="img/nrsi_logo_white.svg" id="logo" />
         <a href="javascript:void(0)" class="curtain-button" style="margin: 16px; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
         <div style="display: flex; flex-direction: column; padding: 2rem">
           <h2><a href="#" style="text-decoration: none; color: white">О проекте</a></h2>
@@ -614,18 +317,6 @@
     </div>
 
     <!--Умница, залез в код и нашёл комментарий. Доволен собой? :)-->
-</body>
-
-<script>
-  /* Open */
-  function openNav() {
-    document.getElementById("ratenav").style.height = "100%";
-  }
-
-  /* Close */
-  function closeNav() {
-    document.getElementById("ratenav").style.height = "0%";
-  }
-</script>
+  </body>
 
 </html>
