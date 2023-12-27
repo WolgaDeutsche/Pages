@@ -53,7 +53,7 @@
     }
 
     .content-limiter {
-      max-width: 87.5rem;
+      max-width: 140rem;
       margin-right: auto;
       margin-left: auto;
     }
@@ -66,6 +66,10 @@
     header {
       border-bottom: 1px solid var(--border-color, #332688);
       gap: 1rem;
+    }
+ 
+    html {
+      font-size: 10px 
     }
 
     .btn-excl {
@@ -312,6 +316,7 @@
       <div class="topnav content-limiter">
         <img id="logo" loading="lazy" src="nrsi_logo_white.svg" />
         <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right;"><img src="img/menu.svg" /></button>
+        <button class="h-navbar-icon hide-desktop" style="float: right; background-color: #5545c5"><img src="img/user.svg" /></button>
         <span id="auth" class="hide-mobile snap-to-grid"><button style="background-color: #5545c5;" class="btn-excl">Личный кабинет</button><button style="background-color: #5545c5;" class="btn-excl"><img src="img/user.svg"
               style="height: 1rem" /></button></span>
         <a href="./rating.html">Рейтинг</a>
@@ -347,15 +352,17 @@
       <div class="pure-u-1 pure-u-md-1-2">
         <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">Описание проекта</h2>
       </div>
-      <div class="pure-u-1 pure-u-md-1-2 text block-padding">Несмотря на активную цифровую трансформацию российских вузов, их сайты не всегда соответствуют современным тенденциям дизайна и разработки. Университетам недостаточно просто
+      <div class="pure-u-1 pure-u-md-1-2 text block-padding"><p>Несмотря на активную цифровую трансформацию российских вузов, их сайты не всегда соответствуют современным тенденциям дизайна и разработки. Университетам недостаточно просто
         обновлять свои веб-ресурсы, важно следить за высоким качеством
         этих изменений. Рейтинг призван стимулировать вузы к более ответственному отношению к своей digital-инфраструктуре.<br /><br />
         Цель рейтинга — вдохновить учебные заведения на модернизацию официальных сайтов, а также повысить общий уровень цифровой трансформации образования в стране. Вузы, чьи сайты займут высокие позиции в рейтинге, смогут получить
         дополнительное
-        признание и поднять свою репутацию среди абитуриентов, студентов, преподавателей, партнеров и общественности в целом.
+        признание и поднять свою репутацию среди абитуриентов, студентов, преподавателей, партнеров и общественности в целом.</p>
       </div>
     </div>
-
+  <div class="content-limiter">
+    <h2 class="snap-to-grid" style="padding-bottom: 4rem">Эксперты</h2>
+  </div>  
     <div class="pure-g snap-to-grid" style="margin-top: 7.5rem;">
       <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
         <img loading="lazy" style="margin: auto; display: block;" src="img/experts/1.png">
