@@ -438,6 +438,20 @@
       } 
     });
   }
+
+  var search_form = $('Form');
+
+  form.on("submit", function (evnt){
+    evnt.preventDefault();
+
+    $ajax({
+      type: "POST",
+      url: "placeholder",
+      data: $(this).serialize()
+    }).done(function(response){
+      console.log(response);
+    });
+  });
   </script>
 </body>
 </html>
