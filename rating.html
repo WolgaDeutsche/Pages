@@ -18,7 +18,7 @@
   <header style="border-bottom: 1px solid var(--border-color, #eaeaea);">
     <div class="topnav content-limiter">
       <img loading="lazy" src="img/nrsi_logo.svg" style="margin-top: 2rem;" id="logo" class="snap-to-grid" />
-      <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right;"><img src="img/menu.svg" /></button>
+      <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right; margin-top: 0.5rem;"><img src="img/menu.svg" /></button>
       <span id="auth" class="hide-mobile snap-to-grid"><button class="btn-excl">Личный кабинет</button><button class="btn-excl"><img src="img/user.svg" style="height: 1rem" /></button></span>
       <a style="color: #2D19BC" href="">Рейтинг</a>
       <a style="color: #2B303D;" href="">Методология</a>
@@ -33,13 +33,13 @@
         <h1>Рейтинг университетов</h1>
         <p>В рейтинге представлены 200 лучших сайтов Российских университетов.</p>
         <p>При формировании рейтинга эксперты оценивали удобство, эргономику, технические свойства, доступность информации, а также цифровой бренд вуза.</p>
-      <div style="display: flex;">
-        <button class="btn-excl">Подробнее о методологии</button><button class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem"/></button>
-      </div>
+        <div style="float: left; display: inline-flex;" class="btn">
+          <a class="btn-link" href="rating.html">Смотреть рейтинг</a><a class="btn-link">➝</a>
+        </div>
       </div>
     </div>
 
-    <div class="snap-to-grid" style="margin-top: 5rem; display: grid; grid-template-columns: 32fr 1fr; gap: 0.5rem;">
+    <div class="snap-to-grid" style="margin-top: 12rem; display: grid; grid-template-columns: 32fr 1fr; gap: 0.5rem;">
       <input class="search" type="text" placeholder="Начните поиск" style="width: inherit; height: 1.75rem; padding: 0.5rem; display: flex;"></input>
       <button class="btn-icon" style="height: 3rem"><img src="img/search.svg" style="height: 1rem"/></button>
     </div>
@@ -246,20 +246,21 @@
 
   
 
-    <div class="pure-g snap-to-grid" style="background: var(--element-color, #F1F3F9); border-radius: 1.5rem; padding: 1.5rem; margin-top: 10rem">
-      <div class="pure-u-1 pure-u-md-1-2">
-        <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h2>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-2 text block-padding">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят
-        вузам не только
-        оценить
-        текущее состояние своих сайтов, но и принять меры для их улучшения.
-        <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных
-        вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
-        <br /><br />
-        <div style="display: flex;"><button class="btn-excl">Методология оценки</button><button class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem" /></button></div>
-      </div>
+  <div class="pure-g snap-to-grid" style="background: var(--element-color, #F1F3F9); border-radius: 1.5rem; padding: 1.5rem; margin-top: 2rem">
+    <div class="pure-u-1 pure-u-md-1-2">
+      <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h2>
     </div>
+    <div class="pure-u-1 pure-u-md-1-2 text block-padding">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят
+      вузам не только
+      оценить
+      текущее состояние своих сайтов, но и принять меры для их улучшения.
+      <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители
+      прогрессивных
+      вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
+      <br /><br />
+      <div style="display: flex;" class="btn"><a class="btn-link" href="rating.html">Методология оценки</a><a class="btn-link">➝</a></div>
+    </div>
+  </div>
   </div>
   <footer class="content-limiter">
     <div id="footer-flex" class="snap-to-grid hide-mobile" style="display: flex; justify-content: space-between; border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
@@ -408,7 +409,7 @@
   <div id="ratenav" class="overlay1">
     <div class="snap-to-grid">
       <div style="border-bottom: 1px solid var(--border-color, #332688); padding-bottom: 1rem;">
-      <img loading="lazy" style="padding-top: 1.5rem" src="img/nrsi_logo_white.svg" id="logo" />
+      <img loading="lazy" style="padding-top: 1rem" src="img/nrsi_logo_white.svg" id="logo" />
       <a href="javascript:void(0)" class="curtain-button" style="padding: 0.2rem; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
       </div>
       <div style="display: flex; flex-direction: column; padding-top: 2rem;">
